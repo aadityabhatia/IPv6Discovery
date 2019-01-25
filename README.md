@@ -10,9 +10,10 @@ npm install ipv6discovery
 ```js
 const ipv6discovery = require("ipv6discovery");
 interfaces = ipv6discovery.getInterfaces();
-ipv6discovery.scanInterface(interfaces[0]).then(hosts => {
-    console.log(hosts);
-    });
+ipv6discovery
+    .scanInterface(interfaces[0])
+    .then(console.log)
+    .catch(console.error);
 ```
 
 ## Usage
